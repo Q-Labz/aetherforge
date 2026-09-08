@@ -1,0 +1,42 @@
+# Blender
+*.blend1
+*.blend2
+__pycache__/
+*.pyc
+
+# Godot
+.godot/
+*.translation
+export_presets.cfg
+.import/
+
+# Python
+.venv/
+venv/
+dist/
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+
+# Pipeline / assets (keep source of truth small)
+pipeline/work/
+pipeline/cache/
+*.fbx
+*.abc
+*.obj
+*.glb
+*.gltf
+!examples/**/*.gltf
+!examples/**/*.glb
+
+# OS / IDE
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*~
+
+# Exports
+exports/
+builds/
+pipeline/.venv/

@@ -1,0 +1,4 @@
+# Keep this folder for Character Creator → Blender → Godot packs.
+# Drop each character into its own subfolder:
+#   Hero_A/Hero_A.glb
+#   Hero_A/Hero_A.aetherforge.json

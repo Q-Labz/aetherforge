@@ -1,0 +1,90 @@
+[gd_scene load_steps=3 format=3 uid="uid://bafmgdemo00001"]
+
+[ext_resource type="Script" path="res://scripts/ui/motion_graphics_demo.gd" id="1"]
+[ext_resource type="Script" path="res://scripts/aetherforge/motion_graphics_player.gd" id="2"]
+
+[node name="MotionGraphicsDemo" type="Node3D"]
+script = ExtResource("1")
+
+[node name="Sun" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.866, -0.354, 0.354, 0, 0.707, 0.707, -0.5, -0.612, 0.612, 0, 4, 2)
+shadow_enabled = true
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.985, 0.174, 0, -0.174, 0.985, 0, 1.4, 4.0)
+current = true
+
+[node name="MotionGraphicsPlayer" type="Node3D" parent="."]
+unique_name_in_owner = true
+script = ExtResource("2")
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="Root" type="Control" parent="UI"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Panel" type="PanelContainer" parent="UI/Root"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -360.0
+offset_top = -280.0
+offset_right = -16.0
+offset_bottom = -16.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="VBox" type="VBoxContainer" parent="UI/Root/Panel"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="StatusLabel" type="Label" parent="UI/Root/Panel/VBox"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Motion Graphics"
+
+[node name="PackList" type="ItemList" parent="UI/Root/Panel/VBox"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+
+[node name="Buttons" type="HBoxContainer" parent="UI/Root/Panel/VBox"]
+layout_mode = 2
+
+[node name="PlayBtn" type="Button" parent="UI/Root/Panel/VBox/Buttons"]
+layout_mode = 2
+text = "Play"
+
+[node name="PauseBtn" type="Button" parent="UI/Root/Panel/VBox/Buttons"]
+layout_mode = 2
+text = "Pause"
+
+[node name="TimeLabel" type="Label" parent="UI/Root/Panel/VBox"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "0.00s"
+
+[node name="ScrubSlider" type="HSlider" parent="UI/Root/Panel/VBox"]
+unique_name_in_owner = true
+layout_mode = 2
+max_value = 4.0
+step = 0.01
+
+[node name="MarkerLog" type="ItemList" parent="UI/Root/Panel/VBox"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+
+[connection signal="item_selected" from="UI/Root/Panel/VBox/PackList" to="." method="_on_pack_list_item_selected"]
+[connection signal="pressed" from="UI/Root/Panel/VBox/Buttons/PlayBtn" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="UI/Root/Panel/VBox/Buttons/PauseBtn" to="." method="_on_pause_pressed"]
+[connection signal="value_changed" from="UI/Root/Panel/VBox/ScrubSlider" to="." method="_on_scrub_slider_value_changed"]
