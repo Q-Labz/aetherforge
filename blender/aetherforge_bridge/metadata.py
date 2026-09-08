@@ -97,7 +97,7 @@ def build_export_extras(root) -> dict[str, Any]:
     meta = ensure_dict(root)
     meta.setdefault("version", AF_VERSION)
     meta.setdefault("kind", "character")
-    if meta.get("kind") == "character"::
+    if meta.get("kind") == "character":
         meta["morphs"] = _collect_morph_names(root)
         meta["clips"] = _collect_clip_stubs(root)
     return {AF_KEY: meta}
