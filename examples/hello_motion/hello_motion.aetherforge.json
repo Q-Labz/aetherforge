@@ -1,0 +1,19 @@
+{
+  "aetherforge": {
+    "version": 1,
+    "kind": "motion_graphics",
+    "source": {
+      "blender": "4.x"
+    },
+    "motion_graphics": {
+      "fps": 24,
+      "duration": 4.0,
+      "layers": ["camera", "titles", "fx"],
+      "markers": [
+        { "name": "AF_MARK_INTRO", "time": 0.0 },
+        { "name": "AF_MARK_BEAT", "time": 2.0 },
+        { "name": "AF_MARK_OUTRO", "time": 3.6 }
+      ]
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "aetherforge": {
+    "version": 1,
+    "kind": "character",
+    "source": {
+      "character_creator": "4.x",
+      "blender": "4.x"
+    },
+    "skeleton": "cc_standard",
+    "morphs": ["Eye_Blink_L", "Eye_Blink_R", "Mouth_Smile"],
+    "clips": [
+      { "name": "Idle", "loop": true },
+      { "name": "Walk", "loop": true },
+      { "name": "Wave", "loop": false }
+    ]
+  }
+}
