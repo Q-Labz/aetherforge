@@ -1,0 +1,10 @@
+{
+  "name": "Blender",
+  "embed_textures": true,
+  "skeleton": "T-Pose",
+  "scale": "meters",
+  "facial_morphs": true,
+  "hair": "include_if_realtime",
+  "cloth": "include_if_realtime",
+  "notes": "Use with docs/character-creator.md and Blender AetherForge Bridge import."
+}

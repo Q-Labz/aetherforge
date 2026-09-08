@@ -1,0 +1,22 @@
+{
+  "cc_standard_to_godot": {
+    "CC_Base_BoneRoot": "Root",
+    "CC_Base_Hip": "Hips",
+    "CC_Base_Waist": "Spine",
+    "CC_Base_Spine01": "Chest",
+    "CC_Base_NeckTwist01": "Neck",
+    "CC_Base_Head": "Head",
+    "CC_Base_L_Thigh": "LeftUpperLeg",
+    "CC_Base_L_Calf": "LeftLowerLeg",
+    "CC_Base_L_Foot": "LeftFoot",
+    "CC_Base_R_Thigh": "RightUpperLeg",
+    "CC_Base_R_Calf": "RightLowerLeg",
+    "CC_Base_R_Foot": "RightFoot",
+    "CC_Base_L_Upperarm": "LeftUpperArm",
+    "CC_Base_L_Forearm": "LeftLowerArm",
+    "CC_Base_L_Hand": "LeftHand",
+    "CC_Base_R_Upperarm": "RightUpperArm",
+    "CC_Base_R_Forearm": "RightLowerArm",
+    "CC_Base_R_Hand": "RightHand"
+  }
+}

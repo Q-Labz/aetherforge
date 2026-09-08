@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aetherforge"
+version = "0.1.0"
+description = "CLI for validating and packing AetherForge character / motion-graphics assets"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.scripts]
+aetherforge = "aetherforge_cli.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["aetherforge_cli*"]
